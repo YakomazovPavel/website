@@ -19,6 +19,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
-          whoami
+          cd /home/pavel/django_project/website/
           ls -l
+          git pull
           
