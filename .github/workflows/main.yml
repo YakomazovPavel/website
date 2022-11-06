@@ -20,6 +20,9 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           cd /home/pavel/django_project/website/
-          ls -l
           git pull
-          
+          source venv/bin/activate
+          cd /home/pavel/django_project/website/my_djando_project/
+          django-admin makemigrations
+          django-admin migrate
+          sudo systemctl restart apache2
