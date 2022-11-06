@@ -18,7 +18,4 @@ jobs:
         host: ${{ secrets.HOST }}
         key: ${{ secrets.KEY }}
         username: ${{ secrets.USERNAME }}
-        script: |
-          whoami
-          ls -l
-          
+        script: whoami         
