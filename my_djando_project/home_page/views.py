@@ -1,6 +1,14 @@
 from django.shortcuts import render
 
 
-def index(request):
-    return render(request, 'home_page/index.html')
+def indexA(request):
+    return render(request, 'home_page/indexA.html')
+    
+    
+def indexB(request):
+    return render(request, 'home_page/indexB.html')
+    
+    
+def indexC(request):
+    return render(request, 'home_page/indexC.html')
 
