@@ -11,10 +11,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: executing remote ssh commands using ssh key
-      uses: appleboy/ssh-action@v0.1.2
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
-        key: ${{ secrets.KEY }}
         username: ${{ secrets.USERNAME }}
-        script: whoami         
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: whoami      
